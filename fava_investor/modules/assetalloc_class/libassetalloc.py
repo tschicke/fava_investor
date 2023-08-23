@@ -102,7 +102,7 @@ def bucketize(vbalance, accapi):
         # what we want is the conversion to be done on the end date, or on a date
         # closest to it, either earlier or later. convert_position does this via bisect
         amount = convert_position(pos, base_currency, price_map, date=end_date)
-        if amount.currency == pos.units.currency and amount.currency != base_currency:
+        if False and amount.currency == pos.units.currency and amount.currency != base_currency:
             # Ideally, we would automatically figure out the currency to hop via, based on the cost
             # currency of the position. However, with vbalance, cost currency info is not
             # available. Hence, we hop via any available operating currency specified by the user.
